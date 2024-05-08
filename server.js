@@ -9,6 +9,10 @@ app.use(cors());
 
 const DATA_FILE = "data.json";
 
+app.get("/", (req, res) => {
+  res.send("Bienvenido a la API de etiquetas.");
+});
+
 app.post("/saveLabels", (req, res) => {
   const labelsData = req.body;
   const deviceId = req.headers["device-id"];
