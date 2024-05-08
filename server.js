@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
@@ -10,7 +10,7 @@ app.use(cors());
 const DATA_FILE = "data.json";
 
 app.get("/", (req, res) => {
-  res.send("Bienvenido a la API de etiquetas.");
+  res.send("Bienvenido a la API Campesino");
 });
 
 app.post("/saveLabels", (req, res) => {

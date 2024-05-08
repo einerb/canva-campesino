@@ -1,5 +1,11 @@
 {
   "main": "server.js",
+  "name": "canva-campesino",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "scripts": {
     "start": "node server.js"
   },
