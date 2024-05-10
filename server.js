@@ -25,6 +25,16 @@ app.get("/getLabels", (req, res) => {
   res.json(labels);
 });
 
+app.post("/clearData", (req, res) => {
+  try {
+    fs.writeFileSync(DATA_FILE, "[]");
+    res.send("Datos eliminados correctamente.");
+  } catch (err) {
+    console.error("Error al limpiar los datos:", err);
+    res.status(500).send("Error al limpiar los datos.");
+  }
+});
+
 function saveLabelsToFile(labelsData, deviceId) {
   const data = {
     id: deviceId,
